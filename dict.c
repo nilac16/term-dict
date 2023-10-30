@@ -29,7 +29,7 @@ static int dict_get_def(CURL *hcurl, struct options *opt)
     char *dptr = downloadbuf;
     char url[128];
     CURLcode result;
-    
+
     snprintf(url, sizeof url, "https://api.dictionaryapi.dev/api/v2/entries/en/%s", opt->word);
     curl_easy_setopt(hcurl, CURLOPT_URL, url);
     curl_easy_setopt(hcurl, CURLOPT_WRITEFUNCTION, dict_write_cb);

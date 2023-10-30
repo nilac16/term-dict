@@ -22,7 +22,7 @@ int dict_logs(loglvl_t lvl, const char *msg)
     FILE *fp = (lvl < DICT_WARN) ? stdout : stderr;
     unsigned i = (unsigned)lvl;
     int res;
-    
+
     res = fprintf(fp, ANSI_BOLD "dict: " ANSI_RESET "%s" ANSI_RESET "%s%s\n",
                                                     prefix[i], colors[i], msg);
     color_reset(fp);

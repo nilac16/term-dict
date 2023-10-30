@@ -92,7 +92,7 @@ int cache_init(void)
         if (res) {
             memset(cache.dir, 0, sizeof cache.dir);
         } else {
-            
+
         }
     } else {
         dict_logs(DICT_WARN, "No HOME dir found, cannot use cache");
@@ -223,7 +223,7 @@ static int cache_evict(void)
     if (cache.count > cache_max()) {
         ftw(cache.dir, cache_ftw_remove, 1);
     } else {
-        
+
     }
     return 0;
 }
